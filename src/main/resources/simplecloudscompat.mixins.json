@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.redcraft86.simplecloudscompat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "simplecloudscompat.refmap.json",
+  "plugin": "com.redcraft86.simplecloudscompat.mixin.MixinPlugin",
+  "mixins": [
+    "cyclic.GrowthEnchantMixin",
+    "cyclic.TileGeneratorSolarMixin",
+    "cyclic.TileWeatherMixin",
+    "supplementaries.FlammableEffectMixin",
+    "supplementaries.FlammableLiquidBlockMixin",
+    "supplementaries.WindVaneBlockMixin"
+  ],
+  "minVersion": "0.8"
+}

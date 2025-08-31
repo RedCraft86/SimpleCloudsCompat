@@ -1,0 +1,1 @@
+Adds compatibility between Simple Clouds' localized weather system and other mods that adds blocks which detect weather.
