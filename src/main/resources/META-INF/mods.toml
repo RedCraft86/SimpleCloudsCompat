@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
-issueTrackerURL="https://github.com/RedCraft86/%MOD_REPO%/issues"
+issueTrackerURL="https://github.com/RedCraft86/SimpleCloudsCompat/issues"
 #clientSideOnly=true # defaults to false if absent
 
 [[mods]]
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
-displayURL="https://github.com/RedCraft86/%MOD_REPO%"
+displayURL="https://github.com/RedCraft86/SimpleCloudsCompat"
 logoFile="logo.png"
 authors="${mod_authors}"
 description='''${mod_description}'''
