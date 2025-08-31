@@ -40,14 +40,14 @@ ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="explorerscompass"
+modId="cyclic"
 mandatory=false
 versionRange="*"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="naturescompass"
+modId="supplementaries"
 mandatory=false
 versionRange="*"
 ordering="AFTER"
