@@ -4,8 +4,6 @@ import com.redcraft86.simplecloudscompat.SCCompat;
 import com.lothrazar.cyclic.block.detectweather.TileWeather;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 
 import org.spongepowered.asm.mixin.Mixin;
