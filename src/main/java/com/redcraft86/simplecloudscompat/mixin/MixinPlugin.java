@@ -18,15 +18,16 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClass, String mixinClass) {
+        boolean hasDependency = true;
         if (mixinClass.contains(".cyclic.")) {
-            LOGGER.info("[Simple Clouds Compat] Loaded Mixin: {}", mixinClass);
-            return isModIncluded("cyclic");
+            hasDependency = isModIncluded("cyclic");
         }
         if (mixinClass.contains(".supplementaries.")) {
-            LOGGER.info("[Simple Clouds Compat] Loaded Mixin: {}", mixinClass);
-            return isModIncluded("supplementaries");
+            hasDependency = isModIncluded("supplementaries");
         }
-        return true;
+
+        LOGGER.info("[Simple Clouds Compat] {} Mixin: {}", hasDependency ? "Loading" : "Skipping", mixinClass);
+        return hasDependency;
     }
 
     @Override
