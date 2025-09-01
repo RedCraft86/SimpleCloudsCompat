@@ -33,7 +33,8 @@ public class GrowthEnchantMixin {
 
     @Redirect(method = "onEntityUpdate",
             at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/Level;isRaining()Z"
+                    target = "Lnet/minecraft/world/level/Level;isRaining()Z",
+                    remap = true
             )
     )
     private boolean redirectIsRaining(Level level) {

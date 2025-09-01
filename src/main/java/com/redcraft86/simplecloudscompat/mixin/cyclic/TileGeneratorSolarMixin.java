@@ -16,12 +16,22 @@ public class TileGeneratorSolarMixin {
     @Unique
     private final BlockPos thisPos = ((TileGeneratorSolar)(Object)this).getBlockPos();
 
-    @Redirect(method = "tryConsumeFuel", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;isThundering()Z"))
+    @Redirect(method = "tryConsumeFuel",
+            at = @At(value = "INVOKE",
+                    target = "Lnet/minecraft/world/level/Level;isThundering()Z",
+                    remap = true
+            )
+    )
     private boolean redirectIsThundering(Level level) {
         return SCCompat.isThundering(level, thisPos, false);
     }
 
-    @Redirect(method = "tryConsumeFuel", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;isRaining()Z"))
+    @Redirect(method = "tryConsumeFuel",
+            at = @At(value = "INVOKE",
+                    target = "Lnet/minecraft/world/level/Level;isRaining()Z",
+                    remap = true
+            )
+    )
     private boolean redirectIsRaining(Level level) {
         return SCCompat.isRaining(level, thisPos, false);
     }

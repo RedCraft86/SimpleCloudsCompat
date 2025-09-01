@@ -18,7 +18,8 @@ public class TileWeatherMixin {
 
     @Redirect(method = "tick",
             at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/Level;isThundering()Z"
+                    target = "Lnet/minecraft/world/level/Level;isThundering()Z",
+                    remap = true
             )
     )
     private boolean redirectIsThundering(Level level) {
@@ -27,7 +28,8 @@ public class TileWeatherMixin {
 
     @Redirect(method = "tick",
             at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/Level;isRaining()Z"
+                    target = "Lnet/minecraft/world/level/Level;isRaining()Z",
+                    remap = true
             )
     )
     private boolean redirectIsRaining(Level level) {

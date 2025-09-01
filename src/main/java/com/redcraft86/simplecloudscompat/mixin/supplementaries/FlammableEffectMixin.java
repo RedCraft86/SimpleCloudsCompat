@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 // I can't test this properly so I hope it works
-@Mixin(value = FlammableEffect.class, remap = false)
+@Mixin(value = FlammableEffect.class)
 public class FlammableEffectMixin {
     @Redirect(method = "applyEffectTick",
             at = @At(value = "INVOKE",

@@ -17,7 +17,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class FlammableLiquidBlockMixin {
     @Redirect(method = "burnStuffAroundLikeFire",
             at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/world/level/block/FireBlock;isNearRain(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Z"
+                    target = "Lnet/minecraft/world/level/block/FireBlock;isNearRain(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Z",
+                    remap = true
             )
     )
     private static boolean redirectIsNearRain(FireBlock fireBlock, Level level, BlockPos pos) {
@@ -27,7 +28,8 @@ public class FlammableLiquidBlockMixin {
 
     @Redirect(method = "burnStuffAroundLikeFire",
             at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/server/level/ServerLevel;isRaining()Z"
+                    target = "Lnet/minecraft/server/level/ServerLevel;isRaining()Z",
+                    remap = true
             )
     )
     private static boolean redirectIsRaining(ServerLevel level) {
